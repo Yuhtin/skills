@@ -1,6 +1,6 @@
 {
-  "name": "adversarial",
-  "description": "Agentes em paralelo com mandato de encontrar falhas: revisar um artefato pronto, debater ideias concorrentes, ou decidir entre opções por steelman cruzado.",
+  "name": "yuhtin-skills",
+  "description": "Agent skills Davi Duarte uses daily: adversarial review/debate/decide, and a full pre-release audit.",
   "version": "1.0.0",
   "author": {
     "name": "Davi Duarte",
@@ -9,5 +9,14 @@
   "homepage": "https://github.com/yuhtin/skills",
   "repository": "https://github.com/yuhtin/skills",
   "license": "MIT",
-  "keywords": ["adversarial", "code-review", "spec-review", "red-team", "decision-making", "subagents"]
+  "keywords": [
+    "adversarial",
+    "code-review",
+    "spec-review",
+    "security-review",
+    "audit",
+    "red-team",
+    "decision-making",
+    "accessibility"
+  ]
 }

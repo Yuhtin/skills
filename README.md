@@ -24,7 +24,7 @@ From inside a session:
 ```
 
 ```
-/plugin install adversarial@yuhtin
+/plugin install yuhtin-skills@yuhtin
 ```
 
 The marketplace only has to be added once; after that, new skills I publish show
@@ -36,11 +36,11 @@ up in `/plugin` and updates arrive with them.
 <summary><strong>Codex</strong></summary>
 
 ```bash
-npx skills@latest add yuhtin/skills -a codex -g
+npx skills@latest add yuhtin/skills
 ```
 
-`-g` installs to `~/.codex/skills/`. Drop it to install into the current project
-instead.
+It asks which agent and whether to install globally. Add `-g` to skip the second
+prompt and go straight to `~/.codex/skills/`.
 
 </details>
 
@@ -104,6 +104,26 @@ argue.
   ```
 
   Don't run it on 1-2 line bugfixes, style, typos, or docs.
+
+- **[security-review](./skills/security-review/SKILL.md)**: A full pre-release
+  audit of an application across six fixed dimensions — security and data
+  exposure, concurrency and state integrity, reliability and failure handling,
+  accessibility, visual consistency, responsive edge cases.
+
+  Every finding carries severity, category, exact location, real-world impact,
+  evidence, reproduction steps, a specific fix, and a confidence level. The audit
+  changes no code: the report comes first, then a prioritised remediation plan,
+  the quick wins, the things needing architectural work, and a release verdict —
+  **ship**, **ship with known risks**, or **do not ship**.
+
+  ```
+  /security-review
+  /security-review da pra lancar isso?
+  ```
+
+  Where `adversarial` forbids a catalogue so the personas find what nobody was
+  looking for, this one *is* the catalogue: the goal is coverage, not depth. Run
+  `adversarial` before merging, `security-review` before shipping.
 
 ## License
 
