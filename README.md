@@ -125,27 +125,27 @@ argue.
   looking for, this one *is* the catalogue: the goal is coverage, not depth. Run
   `adversarial` before merging, `security-review` before shipping.
 
-- **[animated-deck](./skills/animated-deck/SKILL.md)**: A slide deck that
-  explains something — an architecture, a product flow, a pitch — where every
-  slide carries one idea in words and a live scene that shows it: SVG and canvas
-  motion design, not diagrams with fades.
+- **[animated-deck](./skills/animated-deck/SKILL.md)**: Prepares an animated
+  slide deck that explains a project — an architecture, a product flow, a pitch.
+  It researches the project first (the subject's code and docs, the brand's own
+  color tokens and fonts, the build tools on the machine), then grills you one
+  question at a time — each with a recommendation drawn from that research — until
+  every placeholder of the brief is filled: audience, story, facts with sources,
+  palette by role, fonts, and each slide's scene in beats.
 
-  It opens with a grilling session (one question at a time, each with a
-  recommended answer) to close audience, story, facts and look; reads the brand's
-  own tokens from the project instead of inventing a palette; writes the cover
-  itself as the exemplar; then fans out one author and one adversarial reviewer
-  per slide, and a consistency pass over the whole deck. Each scene plays once
-  and rests on a frame that explains the slide alone, at a reading pace, and the
-  deck exports to MP4 frame by frame and to a single offline HTML file.
+  The output is a prompt to paste into a fresh chat. That chat follows the skill's
+  build guide: it writes the cover as the exemplar, fans out one author and one
+  adversarial reviewer per slide, and ships motion-design scenes (SVG and canvas)
+  that play once and rest on a frame that explains the slide alone — plus an MP4
+  recorded frame by frame and a single offline HTML file.
 
   ```
   /animated-deck explica a arquitetura do agente pra equipe amanhã
-  /animated-deck exporta o deck pra mp4
   ```
 
-  Built for Claude's Slides artifacts; without them it still ships the HTML
-  player and the MP4. Needs Chrome, Python with Pillow and Node; ffmpeg and
-  puppeteer for video.
+  Built for Claude's Slides artifacts; without them the build still ships the HTML
+  player and the MP4. The build needs Chrome, Python with Pillow and Node; ffmpeg
+  and puppeteer for video.
 
 ## License
 

@@ -1,7 +1,8 @@
 # Árvore do grilling — o que fechar antes de desenhar
 
-Uma pergunta por vez, na ordem abaixo (cada uma destrava as seguintes). Para cada uma, **dê a sua
-resposta recomendada** e espere. O que está marcado **[descubra]** você procura no ambiente e só
+Uma pergunta por vez, na ordem abaixo (cada uma destrava as seguintes). Cada pergunta preenche
+placeholders de `prompt-template.md` e chega com a **resposta recomendada** tirada do research da
+Fase 1; espere a resposta. O que está marcado **[descubra]** você procura no ambiente e só
 confirma em uma linha — nunca vira pergunta aberta.
 
 ## 1. Plateia e ocasião
@@ -50,5 +51,9 @@ confirma em uma linha — nunca vira pergunta aberta.
   **Recomende** oferecer o MP4 no fim mesmo se não pedido.
 - Onde salvar o MP4 (padrão `~/Downloads/<slug>.mp4`).
 
+## 9. Cenas
+Para cada slide do roteiro, proponha a cena em beats (o que entra, o que se move, onde repousa) com
+uma metáfora de `motion-kit.md` § A régua de criatividade, e peça ok ou ajuste — um slide por vez.
+
 ## Fechamento
-Escreva `DESIGN.md` §1–§3 e o roteiro de títulos, mostre, e pergunte se fechou. Só avance com o "sim".
+Mostre o brief inteiro preenchido e pergunte se fechou. Só gere o prompt com o "sim".
