@@ -1,8 +1,8 @@
 # Construir o deck (o chat que recebeu o prompt)
 
-Você recebeu um prompt gerado pela skill `animated-deck` com o **brief** preenchido (plateia, mensagem,
-palavras, paleta, fontes, fatos com fonte, roteiro e cenas). O brief é o contrato: não reabra decisões
-dele; o que faltar, pergunte uma coisa por vez.
+Você recebeu um prompt-guia gerado pela skill `animated-deck` (plateia, mensagem, palavras, paleta,
+fontes, fatos com fonte, roteiro e ideias de cena). O que ele traz decidido vale; o que vem como
+orientação você decide, seguindo `motion-kit.md`. Construa num tiro só; pergunte só se algo bloquear.
 
 `SKILL` = a pasta desta skill (a que contém este arquivo). **Pasta de trabalho** (`ROOT`): uma pasta no
 scratchpad (`<scratchpad>/<slug>-deck/`), nunca dentro do repositório do projeto.
@@ -16,7 +16,8 @@ scratchpad (`<scratchpad>/<slug>-deck/`), nunca dentro do repositório do projet
 3. Leia **agora** `SKILL/references/runtime.md` e `SKILL/references/motion-kit.md` — são as regras que
    quebram se ignoradas.
 
-**Pronto quando:** `ROOT/DESIGN.md` e `deck.config.json` existem sem nenhum placeholder, e
+**Pronto quando:** `ROOT/DESIGN.md` e `deck.config.json` existem, com as orientações do prompt já
+resolvidas em valores (nenhum placeholder), e
 `python3 tools/render.py` roda.
 
 ## Fase 2 — Capa exemplar

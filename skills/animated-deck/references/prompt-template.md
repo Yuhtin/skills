@@ -1,13 +1,17 @@
 # Modelo do prompt de saída
 
-Preencha todo `{{…}}` e entregue o bloco abaixo inteiro. Tudo que está fora de `{{}}` fica como está.
+Troque todo `{{…}}` por um valor ou por uma orientação ("a critério do build: …") e entregue o bloco
+inteiro. O prompt é um guia para um tiro só, não um contrato fechado: seja preciso no que foi decidido
+e dê direção no resto. Tudo que está fora de `{{}}` fica como está.
 O chat novo grava a parte "Brief" como `ROOT/DESIGN.md` — os números de seção (§1–§7) são os que os
 prompts dos agentes citam; mantenha-os.
 
 ````markdown
 Use a skill `animated-deck` e siga `references/build.md` dela para construir este deck
 (se não estiver instalada: https://github.com/yuhtin/skills → skills/animated-deck).
-O brief abaixo está fechado com o dono; não reabra decisões dele.
+O que está decidido abaixo vale; o que vem como orientação ou "a critério do build", decida você
+seguindo `references/motion-kit.md`. Construa o deck inteiro de uma vez, sem voltar com perguntas
+salvo bloqueio real.
 
 # Brief — {{título do deck}}
 
@@ -68,5 +72,5 @@ Movimento ambiente só em: {{capa, fecho}}.
 ## 7. Slides
 {{para cada slide, na ordem:
 NN **id** — STAGE|STATEMENT. Eyebrow "NN · …". Título "…" (≤ 40 caracteres). Lede "…" (≤ 140).
-CENA: beats em ordem — o que entra, o que se move, o que é lido, onde repousa.}}
+CENA: a ideia (e os beats, se já combinados) — o que entra, o que se move, onde repousa.}}
 ````

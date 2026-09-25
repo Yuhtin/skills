@@ -4,16 +4,16 @@ description: >
   Use para preparar um deck de slides animado que explica um projeto a uma plateia (arquitetura,
   produto, fluxo, pitch, onboarding): pesquisa o projeto, faz grilling com o usuário para preencher
   cada placeholder do brief — plateia, roteiro, fatos, cores e fontes da marca, cenas — e devolve um
-  prompt pronto para colar num chat novo que constrói o deck (motion design em SVG/canvas, toca uma
+  prompt-guia para colar num chat novo que constrói o deck num tiro só (motion design em SVG/canvas, toca uma
   vez, exporta MP4). Triggers: "deck animado", "slides animados", "apresentação com animação",
   "monta um deck pra apresentar", /animated-deck
 ---
 
 # Deck animado — do projeto ao prompt
 
-Esta skill **não constrói** o deck. Ela produz o **brief** completo e o entrega como um prompt para
-colar num chat novo, que então segue `references/build.md`. Separar assim deixa o chat que constrói
-com o contexto limpo, só com o contrato.
+Esta skill **não constrói** o deck. Ela produz um **prompt-guia**: o que o usuário decidiu, o que o
+research encontrou, e orientação para o resto — o suficiente para um chat novo gerar o deck num tiro só
+seguindo `references/build.md`. Separar assim deixa o chat que constrói com o contexto limpo.
 
 O padrão de qualidade saiu de quatro pedidos de um usuário; o brief já nasce com eles:
 
@@ -39,7 +39,7 @@ a uma recomendação do que a uma pergunta em branco. Levante, com fonte (`arqui
 Para temas grandes, delegue a leitura a subagentes e guarde só as conclusões.
 
 **Pronto quando:** cada placeholder de [`references/prompt-template.md`](references/prompt-template.md)
-tem uma **resposta recomendada** tirada do research, ou está marcado como decisão do usuário.
+tem uma **resposta recomendada** tirada do research, ou uma orientação padrão.
 
 ## Fase 2 — Grilling
 
@@ -48,13 +48,15 @@ Invoque a skill `grilling` (a mesma sessão do `/grill-me`) sobre a árvore de
 instalada, siga as regras dela: uma pergunta por vez, cada uma com a sua recomendação; fato descobrível
 você descobre; decisão é do usuário e você espera a resposta.
 
-**Pronto quando:** todo placeholder tem valor confirmado e o usuário disse que fechou.
+**Pronto quando:** o essencial está confirmado — plateia, mensagem, roteiro de títulos, cores e fontes
+da marca, saídas — e o usuário disse que fechou. O resto pode seguir como orientação.
 
 ## Fase 3 — O prompt
 
 Preencha [`references/prompt-template.md`](references/prompt-template.md) e devolva-o inteiro num único
-bloco de código, pronto para colar, com uma linha antes: "Cole num chat novo." Nada fica em aberto: um
-`{{…}}` sobrando quebra o build.
+bloco de código, pronto para colar, com uma linha antes: "Cole num chat novo." Todo `{{…}}` vira ou um
+valor (decidido ou achado no research) ou uma orientação explícita para o build ("a critério do build:
+…"); nenhum fica cru.
 
-**Pronto quando:** o bloco não tem nenhum `{{`, todo número do roteiro está na lista de fatos, e cada
-slide tem cena descrita em beats.
+**Pronto quando:** o bloco não tem nenhum `{{` cru, os fatos citados têm fonte, e cada slide tem ao
+menos a ideia da cena (os beats podem ficar para o build).

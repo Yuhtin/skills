@@ -52,8 +52,8 @@ confirma em uma linha — nunca vira pergunta aberta.
 - Onde salvar o MP4 (padrão `~/Downloads/<slug>.mp4`).
 
 ## 9. Cenas
-Para cada slide do roteiro, proponha a cena em beats (o que entra, o que se move, onde repousa) com
-uma metáfora de `motion-kit.md` § A régua de criatividade, e peça ok ou ajuste — um slide por vez.
+Proponha a ideia de cena de cada slide (uma metáfora de `motion-kit.md` § A régua de criatividade) numa
+lista só, e pergunte se o usuário quer ajustar alguma ou deixar o build decidir os detalhes.
 
 ## Fechamento
-Mostre o brief inteiro preenchido e pergunte se fechou. Só gere o prompt com o "sim".
+Mostre o resumo do que foi decidido e do que vai como orientação, e pergunte se fechou. Gere o prompt com o "sim".
