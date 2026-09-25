@@ -1,0 +1,13 @@
+{
+  "title": "Nome do deck",
+  "fontsHref": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap",
+  "backgrounds": ["#F4F3EE"],
+  "bannedColors": [],
+  "bannedRgb": [],
+  "minFontPx": 24,
+  "holdMs": 2500,
+  "ambientMs": { "capa": 8000 },
+  "ambientTailMs": { "fim": 4000 },
+  "chrome": "",
+  "puppeteer": ""
+}

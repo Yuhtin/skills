@@ -125,6 +125,28 @@ argue.
   looking for, this one *is* the catalogue: the goal is coverage, not depth. Run
   `adversarial` before merging, `security-review` before shipping.
 
+- **[animated-deck](./skills/animated-deck/SKILL.md)**: A slide deck that
+  explains something — an architecture, a product flow, a pitch — where every
+  slide carries one idea in words and a live scene that shows it: SVG and canvas
+  motion design, not diagrams with fades.
+
+  It opens with a grilling session (one question at a time, each with a
+  recommended answer) to close audience, story, facts and look; reads the brand's
+  own tokens from the project instead of inventing a palette; writes the cover
+  itself as the exemplar; then fans out one author and one adversarial reviewer
+  per slide, and a consistency pass over the whole deck. Each scene plays once
+  and rests on a frame that explains the slide alone, at a reading pace, and the
+  deck exports to MP4 frame by frame and to a single offline HTML file.
+
+  ```
+  /animated-deck explica a arquitetura do agente pra equipe amanhã
+  /animated-deck exporta o deck pra mp4
+  ```
+
+  Built for Claude's Slides artifacts; without them it still ships the HTML
+  player and the MP4. Needs Chrome, Python with Pillow and Node; ffmpeg and
+  puppeteer for video.
+
 ## License
 
 MIT

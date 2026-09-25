@@ -1,6 +1,6 @@
 {
   "name": "yuhtin-skills",
-  "description": "Agent skills Davi Duarte uses daily: adversarial review/debate/decide, and a full pre-release audit.",
+  "description": "Agent skills Davi Duarte uses daily: adversarial review/debate/decide, a full pre-release audit, and animated slide decks.",
   "version": "1.0.0",
   "author": {
     "name": "Davi Duarte",
@@ -17,6 +17,10 @@
     "audit",
     "red-team",
     "decision-making",
-    "accessibility"
+    "accessibility",
+    "slides",
+    "presentation",
+    "animation",
+    "motion-design"
   ]
 }
