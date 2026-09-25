@@ -17,7 +17,7 @@
 
 ```html
 <style>
-html,body{background:#F4F3EE;color-scheme:only light}svg{display:block;width:100vw;height:100vh}
+html,body{background:#FFFFFF;color-scheme:only light}svg{display:block;width:100vw;height:100vh}
 .s{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
 .f{font-family:ui-serif,"New York",Georgia,"Times New Roman",serif}
 .m{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
@@ -50,7 +50,7 @@ if(window.appifactEmbed)appifactEmbed.onUpdate(function(s){if(s&&s.exporting)fra
 </script>
 ```
 
-- Troque o fundo em `html,body` pela cor do slide; `viewBox` = tamanho da caixa do embed.
+- Troque `#FFFFFF` em `html,body` pela cor de fundo do slide; `viewBox` = tamanho da caixa do embed.
 - Muitas partículas (milhares de grãos, poeira, ruído): `<canvas>` desenhado em `frame(t)` com PRNG
   determinístico (mulberry32), dimensionado por `cv.clientWidth||W` × devicePixelRatio. Texto e ícones
   continuam num `<svg>` por cima, nítidos.

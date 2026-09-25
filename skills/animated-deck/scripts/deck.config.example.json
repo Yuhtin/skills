@@ -1,7 +1,7 @@
 {
   "title": "Nome do deck",
-  "fontsHref": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap",
-  "backgrounds": ["#F4F3EE"],
+  "fontsHref": "https://fonts.googleapis.com/css2?family=<Display>&family=<Texto>&family=<Mono>&display=swap",
+  "backgrounds": ["#FFFFFF"],
   "bannedColors": [],
   "bannedRgb": [],
   "minFontPx": 24,

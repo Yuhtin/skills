@@ -62,10 +62,7 @@ Leia [`references/runtime.md`](references/runtime.md) e [`references/motion-kit.
 ## Fase 3 — Capa exemplar
 
 Você mesmo escreve a capa: é o **exemplar** que todos os outros copiam (kit de movimento, pintura
-do fundo, gancho de exportação, estilo do texto). Dois exemplos prontos, de um deck real, em
-`examples/`: `capa-anel-granulado.html` (motivo da marca em canvas, cérebro/ícone no centro, movimento
-ambiente) e `stage-regra.html` (slide de conteúdo com o kit inteiro). Adapte o princípio, não o conteúdo.
-Com a ferramenta Artifact: `quickstart` de slides →
+do fundo, gancho de exportação, estilo do texto). Com a ferramenta Artifact: `quickstart` de slides →
 crie o deck pelo `type_url` → escreva `project/deck.json` completo (ordem de todos os slides) e a capa
 → `check_slide.py` + `render.py` → publique os dois. Sem Artifact: mesmo layout de arquivos; a entrega
 é `tools/standalone.py` (HTML) e o MP4.
