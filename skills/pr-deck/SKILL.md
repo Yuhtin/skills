@@ -16,18 +16,18 @@ já respondida. O grilling que sobra, o prompt-guia e o build são da `animated-
 
 Precisa do `gh` autenticado, dentro do repositório dos PRs.
 
-Argumentos opcionais: a base (padrão: o branch padrão do repositório), números de PR para
-restringir, a plateia.
+Argumentos opcionais: números de PR ou uma base para restringir.
 
 ## 1. Levantar os PRs
 
 ```sh
-BASE=$(gh repo view --json defaultBranchRef -q .defaultBranchRef.name)
-gh pr list --author @me --base "$BASE" --state open --limit 100 \
-  --json number,title,url,isDraft,additions,deletions,headRefName,body,files
+gh pr list --author @me --state open --limit 100 \
+  --json number,title,url,isDraft,additions,deletions,baseRefName,headRefName,body,files
 ```
 
-Rascunhos entram, marcados "rascunho". Nenhum PR aberto: diga isso e pare.
+Entram **todos** os PRs abertos do usuário, qualquer que seja a base. Rascunhos entram, marcados
+"rascunho". PR empilhado (a base é o branch de outro PR da lista): a ficha anota de qual depende, e
+só o diff dele próprio conta. Nenhum PR aberto: diga isso e pare.
 
 Um subagente por PR, em paralelo (PRs com menos de ~100 linhas você mesmo lê). Cada um lê o corpo do
 PR e `gh pr diff <n>` e devolve uma **ficha**:
@@ -87,9 +87,15 @@ Chegam ao grilling já respondidos, como recomendação para confirmar em uma li
 - **Movimento, saídas:** os padrões da `animated-deck`.
 - **Cenas:** as da tabela de tratamento.
 
-O grilling pergunta, numa rodada só: a plateia e a ocasião (se não vieram no argumento), a tabela
-de classificação (PR · tipo · frontend · slide) para o usuário corrigir ou cortar PRs, e o roteiro
-de títulos.
+Duas perguntas são sempre feitas ao usuário, e a resposta é esperada — nenhuma é presumida, nem
+quando veio pista no pedido:
 
-**Pronto quando:** a `animated-deck` entregou o prompt-guia dela, com as regras da tabela de
-tratamento escritas na ideia de cena de cada slide do §7.
+1. **A plateia:** quem vai assistir, o que já sabe, e a ocasião (ao vivo, vídeo, lido sozinho).
+   Vem primeiro: ela decide o vocabulário, o quanto de detalhe técnico entra e a ordem do roteiro.
+2. **O roteiro:** depois da plateia, mostre a tabela inteira — slide · título · PRs que cobre ·
+   tipo · frontend — já ajustada a ela, e peça a confirmação. O usuário corrige a classificação,
+   corta PRs, reordena ou troca títulos; reapresente até ouvir o "sim".
+
+**Pronto quando:** o usuário respondeu a plateia e confirmou o roteiro, e a `animated-deck`
+entregou o prompt-guia dela com as regras da tabela de tratamento escritas na ideia de cena de
+cada slide do §7.

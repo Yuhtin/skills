@@ -148,8 +148,8 @@ argue.
   and puppeteer for video.
 
 - **[pr-deck](./skills/pr-deck/SKILL.md)**: Turns your open pull requests into
-  the research for an animated deck. It lists your open PRs against the default
-  branch with `gh`, reads each diff, and files one card per PR — what changed, in
+  the research for an animated deck. It lists every open PR of yours with `gh`,
+  whatever the base branch, reads each diff, and files one card per PR — what changed, in
   the words of whoever uses the product, before and after, every fact sourced to
   the diff. Then it decides each PR's slide:
 
@@ -159,12 +159,13 @@ argue.
   | A new feature | A slide of its own, where the motion is the explanation and the text stays short. |
   | A change you can see on a screen | Where → what → before/after: a small map of the page, a zoom into the region that changed, the old state giving way to the new one. Never a full screenshot. |
 
-  It hands all of that to `animated-deck`, whose grilling shrinks to one round:
-  the audience, the classification table for you to correct, the slide titles.
+  It hands all of that to `animated-deck`, with most of its grilling
+  already answered. Two questions it always asks and waits on: who the audience
+  is, and — once it knows — whether the slide-by-slide outline is right.
 
   ```
   /pr-deck
-  /pr-deck pra apresentar na sexta pro time de produto
+  /pr-deck só o 412 e o 418
   ```
 
   Needs `animated-deck` and an authenticated `gh`, run from the repository the
