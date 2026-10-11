@@ -147,6 +147,29 @@ argue.
   player and the MP4. The build needs Chrome, Python with Pillow and Node; ffmpeg
   and puppeteer for video.
 
+- **[pr-deck](./skills/pr-deck/SKILL.md)**: Turns your open pull requests into
+  the research for an animated deck. It lists your open PRs against the default
+  branch with `gh`, reads each diff, and files one card per PR — what changed, in
+  the words of whoever uses the product, before and after, every fact sourced to
+  the diff. Then it decides each PR's slide:
+
+  | The PR is | It becomes |
+  |---|---|
+  | A bug fix or a small change | One line on a shared slide, three to five per slide, grouped by product area. |
+  | A new feature | A slide of its own, where the motion is the explanation and the text stays short. |
+  | A change you can see on a screen | Where → what → before/after: a small map of the page, a zoom into the region that changed, the old state giving way to the new one. Never a full screenshot. |
+
+  It hands all of that to `animated-deck`, whose grilling shrinks to one round:
+  the audience, the classification table for you to correct, the slide titles.
+
+  ```
+  /pr-deck
+  /pr-deck pra apresentar na sexta pro time de produto
+  ```
+
+  Needs `animated-deck` and an authenticated `gh`, run from the repository the
+  PRs belong to.
+
 ## License
 
 MIT
