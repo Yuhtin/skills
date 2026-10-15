@@ -171,6 +171,18 @@ argue.
   Needs `animated-deck` and an authenticated `gh`, run from the repository the
   PRs belong to.
 
+- **[deeper-version](./skills/deeper-version/SKILL.md)**: Turns a task into a
+  deeper version of itself, not a bigger one. Before rewriting the prompt it
+  answers four questions: what a top professional in the field would do that you
+  didn't ask for, the rawest material they would start from instead of what has
+  already been digested, the specific methods and tools they would use, and what
+  — other than you or the model — would show the result is right. Then it
+  rewrites the prompt to ask for exactly that.
+
+  ```
+  /deeper-version analisa o churn dos últimos 6 meses
+  ```
+
 ## License
 
 MIT
