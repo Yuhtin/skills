@@ -183,6 +183,17 @@ argue.
   /deeper-version analisa o churn dos últimos 6 meses
   ```
 
+- **[optimize-app](./skills/optimize-app/SKILL.md)**: Makes an app faster — startup
+  time, how fast each screen opens, how fast content loads, scrolling, and how
+  quickly older content comes in. It finds where the real performance gap is
+  before touching anything, applies the fixes, and benchmarks before and after
+  each one to see whether it actually worked.
+
+  ```
+  /optimize-app
+  /optimize-app a tela de listagem demora pra abrir
+  ```
+
 ## License
 
 MIT
