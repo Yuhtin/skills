@@ -187,7 +187,13 @@ argue.
   time, how fast each screen opens, how fast content loads, scrolling, and how
   quickly older content comes in. It finds where the real performance gap is
   before touching anything, applies the fixes, and benchmarks before and after
-  each one to see whether it actually worked.
+  each one to see whether it actually worked. The baseline comes from the rawest
+  data the project has (production traces before local runs), before and after
+  are measured under the same conditions over several runs, any fix that didn't
+  beat the noise is reverted, and the real flows are re-run to show nothing broke.
+  It ends with a before/after table, one row per fix, reverted ones included.
+  Measurement rules adapted from a checklist based on
+  [@santtiagom_'s post](https://x.com/santtiagom_/status/2111589281282077045).
 
   ```
   /optimize-app
