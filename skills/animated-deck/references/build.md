@@ -11,8 +11,8 @@ scratchpad (`<scratchpad>/<slug>-deck/`), nunca dentro do repositório do projet
 
 1. Copie `SKILL/scripts/` para `ROOT/tools/`. Escreva `ROOT/deck.config.json` com o bloco `deck.config`
    do brief, e `ROOT/DESIGN.md` com a parte "Brief" do prompt (seções §1–§7), acrescentando no topo os caminhos de `SKILL/references/runtime.md` e `motion-kit.md` e o do slide exemplar (a capa).
-2. Pré-requisitos: Chrome, `python3` com Pillow, `node`; para MP4 também `ffmpeg` e
-   `puppeteer`/`puppeteer-core` (o caminho vem no `deck.config`).
+2. Pré-requisitos: Chrome, `python3` com Pillow, `node`; se as Saídas do brief incluem MP4, também
+   `ffmpeg` e `puppeteer`/`puppeteer-core` (o caminho vem no `deck.config`).
 3. Leia **agora** `SKILL/references/runtime.md` e `SKILL/references/motion-kit.md` — são as regras que
    quebram se ignoradas.
 
@@ -26,7 +26,7 @@ Você mesmo escreve a capa: é o **exemplar** que todos os outros copiam (kit de
 fundo, gancho de exportação, estilo do texto). Com a ferramenta Artifact: `quickstart` de slides → crie o
 deck pelo `type_url` → escreva `project/deck.json` completo (ordem de todos os slides) e a capa →
 `check_slide.py` + `render.py` → publique os dois. Sem Artifact: mesmo layout de arquivos; a entrega é
-`tools/standalone.py` (HTML) e o MP4.
+`tools/standalone.py` (HTML).
 
 **Pronto quando:** a capa passa na checagem, você leu o render dela, e ela está publicada.
 
@@ -42,16 +42,18 @@ voltou `allPass`.
 
 `python3 tools/contact_sheet.py` → leia as folhas **em ordem**, como a plateia. Corrija o que destoa,
 publique, e entregue: link, duração de cada cena, o que ficou para o usuário decidir (uma linha cada).
-Ofereça o MP4 em uma linha se não foi pedido.
+Se a ocasião é ao vivo, avise que no Present o clique sempre passa de slide, e que o `out/deck.html` termina
+a cena primeiro.
 
 **Pronto quando:** o deck publicado é o que você leu nas folhas, e as decisões pendentes estão na resposta.
 
-## Fase 5 — MP4 e HTML standalone
+## Fase 5 — HTML standalone e MP4
 
-`SKILL/references/video.md`.
+Gere o que está nas Saídas do brief, seguindo `SKILL/references/video.md`. O MP4 só existe se estiver lá ou se
+o usuário pedir depois.
 
 ## Depois da entrega
 
 Os ajustes que sempre chegam — "mais devagar/mais rápido", "cores erradas", "tá em loop", "esse objeto
 parece girar ao contrário" — têm receita em `SKILL/references/motion-kit.md` § Ajustes. Mexa só no slide
-citado; regrave o MP4 depois.
+citado; se já existe MP4, regrave-o depois.

@@ -2,7 +2,7 @@
 
 ## MP4
 
-O vídeo não é gravado da tela: cada cena roda num **relógio virtual** (`performance.now()` trocado),
+Só grave se as Saídas do brief incluem MP4 ou se o usuário pediu. O vídeo não é gravado da tela: cada cena roda num **relógio virtual** (`performance.now()` trocado),
 o gravador avança 1/30 s, espera a cena confirmar que desenhou e fotografa. Sai liso a 30 fps em
 qualquer máquina, e os quadros vão direto para o ffmpeg (nenhum arquivo intermediário; o disco só
 recebe o MP4, ~5 MB por minuto).
@@ -25,6 +25,8 @@ Se uma gravação em andamento ficou velha por causa de uma mudança pedida, par
 
 ## HTML standalone
 
-`python3 tools/standalone.py` → `out/deck.html`: um arquivo só, setas/espaço/clique avançam, `F` tela
-cheia, cada slide recomeça a cena ao ser mostrado. É a entrega quando não há ferramenta Artifact, ou um
-extra para abrir offline (as web fonts ainda vêm do Google Fonts).
+`python3 tools/standalone.py` → `out/deck.html`: um arquivo só. Clique, espaço e setas para a frente terminam
+a cena que ainda está tocando; com ela em repouso, passam de slide. Setas para trás e Home/End vão direto, `F`
+é tela cheia, e cada slide recomeça a cena ao ser mostrado. Uma camada sobre o palco recebe os cliques, então
+links dentro do slide não abrem. É a entrega quando não há ferramenta Artifact, para apresentar ao vivo com
+essa regra, ou um extra para abrir offline (as web fonts ainda vêm do Google Fonts).

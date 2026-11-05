@@ -96,8 +96,18 @@ def end_and_speed(body):
     """END (scene time of the resting state) and SP (scene clock speed) read off an embed's script."""
     m = re.search(r"\bEND\s*=\s*(\d+)", body)
     end = int(m.group(1)) if m else None
-    s = re.search(r"\(performance\.now\(\)-T0\)\*([\d.]+)\s*,\s*END", body)
+    s = re.search(r"\(performance\.now\(\)-T0\)\*([\d.]+)\s*,\s*END", body) or re.search(r"\bSP\s*=\s*([\d.]+)", body)
     return end, float(s.group(1)) if s else 1.0
+
+
+def scene_ms(raw):
+    """Real time until a slide's scenes all reach their resting state, in ms (0 if nothing plays)."""
+    ms = 0
+    for body in re.findall(r"<x-embed[^>]*>(.*?)</x-embed>", raw, re.S | re.I):
+        end, sp = end_and_speed(body)
+        if end:
+            ms = max(ms, round(end / sp))
+    return ms
 
 
 def poster_time(body):

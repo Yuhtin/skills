@@ -17,7 +17,7 @@ salvo bloqueio real.
 
 Plateia: {{quem assiste e o que já sabe}}. Ocasião: {{ao vivo / vídeo / PDF}}, {{data}}.
 Idioma: {{idioma}}. Duração da fala: {{min}}. Mensagem que fica: "{{uma frase}}".
-Projeto de origem: {{caminho do repo / URL}}. Saídas: {{deck Artifact · MP4 em <caminho> · HTML}}.
+Projeto de origem: {{caminho do repo / URL}}. Saídas: {{deck Artifact · HTML · MP4 em <caminho>, só se o usuário pediu}}.
 
 ## deck.config
 ```json

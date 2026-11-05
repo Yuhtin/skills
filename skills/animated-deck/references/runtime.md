@@ -28,6 +28,9 @@ e confirmados em uso. Cada item é uma armadilha que já quebrou um deck.
   `getComputedTextLength()` = 0. Canvas: dimensione pelo tamanho lógico (`cv.clientWidth||W`);
   medidas de texto: `canvas.measureText` com a mesma fonte, ou meça de novo quando der não-zero.
 - Rotação ambiente contínua (capa/fim) usa `performance.now()` direto; mantenha a do resto no `tick`.
+- A navegação é do host: clique e teclas passam de slide mesmo com a cena tocando, e a cena não tem como
+  impedir. O `<x-embed>` não recebe clique nem teclado (tomar o foco desativa o embed), e o runtime nunca chama
+  `appifactEmbed.onGesture`. Para o clique terminar a cena primeiro, use o HTML standalone (`video.md`).
 
 ## Miniatura, PDF, PowerPoint
 

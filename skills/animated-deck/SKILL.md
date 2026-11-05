@@ -5,7 +5,7 @@ description: >
   produto, fluxo, pitch, onboarding): pesquisa o projeto, faz grilling com o usuário para preencher
   cada placeholder do brief — plateia, roteiro, fatos, cores e fontes da marca, cenas — e devolve um
   prompt-guia para colar num chat novo que constrói o deck num tiro só (motion design em SVG/canvas, toca uma
-  vez, exporta MP4). Triggers: "deck animado", "slides animados", "apresentação com animação",
+  vez). Triggers: "deck animado", "slides animados", "apresentação com animação",
   "monta um deck pra apresentar", /animated-deck
 ---
 
@@ -15,14 +15,13 @@ Esta skill **não constrói** o deck. Ela produz um **prompt-guia**: o que o usu
 research encontrou, e orientação para o resto — o suficiente para um chat novo gerar o deck num tiro só
 seguindo `references/build.md`. Separar assim deixa o chat que constrói com o contexto limpo.
 
-O padrão de qualidade saiu de quatro pedidos de um usuário; o brief já nasce com eles:
+O padrão de qualidade saiu de três pedidos de um usuário; o brief já nasce com eles:
 
 | O pedido que foi preciso fazer | Vira padrão no brief |
 |---|---|
 | "seja criativo — animações, gráficos em SVG que se mexem" | toda cena é motion design que carrega significado, não diagrama com fade |
 | "use as cores da marca" | paleta lida dos tokens do projeto, um acento, fundo da marca |
 | "toca uma vez, sem loop" + "mais devagar pra dar tempo de ler" | a cena toca uma vez e repousa no **pôster**; ritmo de leitura |
-| "exporta pra mp4" | gravação quadro a quadro pronta no fim |
 
 ## Fase 1 — Research do projeto
 
@@ -33,8 +32,8 @@ a uma recomendação do que a uma pergunta em branco. Levante, com fonte (`arqui
   plateia precisa ver (ex.: "da pergunta à resposta"); números reais; o que é presente e o que é futuro.
 - **A marca:** tokens de cor (tema CSS, Tailwind, design system), fontes, favicon/logo, landing page;
   um motivo visual que a capa possa usar.
-- **O ambiente de build:** Chrome, `python3` + Pillow, `node`, `ffmpeg`, um `puppeteer` existente em
-  algum `node_modules`.
+- **O ambiente de build:** Chrome, `python3` + Pillow, `node`; se o usuário pediu MP4, também `ffmpeg` e
+  um `puppeteer` existente em algum `node_modules`.
 
 Para temas grandes, delegue a leitura a subagentes e guarde só as conclusões.
 

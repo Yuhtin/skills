@@ -47,9 +47,11 @@ confirma em uma linha — nunca vira pergunta aberta.
 - Acessibilidade: movimento reduzido mostra o pôster.
 
 ## 8. Saídas
-- Deck (Artifact de slides — padrão quando a ferramenta existe), MP4, HTML standalone, PDF.
-  **Recomende** oferecer o MP4 no fim mesmo se não pedido.
-- Onde salvar o MP4 (padrão `~/Downloads/<slug>.mp4`).
+- Deck (Artifact de slides — padrão quando a ferramenta existe), HTML standalone, PDF. Ao vivo,
+  **recomende** incluir o HTML: é nele que o clique termina a cena antes de passar de slide; no Present
+  do Artifact o clique sempre passa.
+- MP4 só entra se o usuário pedir; não ofereça. Se ele disse que vai enviar como vídeo, confirme se quer o
+  MP4. Pedido, pergunte onde salvar (padrão `~/Downloads/<slug>.mp4`).
 
 ## 9. Cenas
 Proponha a ideia de cena de cada slide (uma metáfora de `motion-kit.md` § A régua de criatividade) numa

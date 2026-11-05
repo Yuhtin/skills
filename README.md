@@ -136,16 +136,17 @@ argue.
   The output is a prompt to paste into a fresh chat. That chat follows the skill's
   build guide: it writes the cover as the exemplar, fans out one author and one
   adversarial reviewer per slide, and ships motion-design scenes (SVG and canvas)
-  that play once and rest on a frame that explains the slide alone — plus an MP4
-  recorded frame by frame and a single offline HTML file.
+  that play once and rest on a frame that explains the slide alone — plus a single
+  offline HTML file where a click finishes a playing scene before moving on, and an
+  MP4 recorded frame by frame if you ask for one.
 
   ```
   /animated-deck explica a arquitetura do agente pra equipe amanhã
   ```
 
   Built for Claude's Slides artifacts; without them the build still ships the HTML
-  player and the MP4. The build needs Chrome, Python with Pillow and Node; ffmpeg
-  and puppeteer for video.
+  player. The build needs Chrome, Python with Pillow and Node; ffmpeg and puppeteer
+  only for video.
 
 - **[pr-deck](./skills/pr-deck/SKILL.md)**: Turns your open pull requests into
   the research for an animated deck. It lists every open PR of yours with `gh`,
