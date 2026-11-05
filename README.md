@@ -200,6 +200,37 @@ argue.
   /optimize-app a tela de listagem demora pra abrir
   ```
 
+- **[eval-guidelines](./skills/eval-guidelines/SKILL.md)**: The rules to follow
+  whenever you create or improve the eval of a harness, custom agent, or anything
+  else built on an LLM: real failures as cases and error analysis before any grader,
+  the cheapest grader that catches each failure, the grader itself checked against
+  human labels, an error bar and a detection floor on every number, and what to run
+  on each commit, on each prompt change, and after shipping.
+
+  It ends on four numbers: pass rate with its error bar, grader vs human agreement,
+  detection floor, and the share of cases that got worse in the last change.
+
+  ```
+  /eval-guidelines
+  /eval-guidelines melhora o eval do agente de suporte
+  ```
+
+- **[guardrail-guidelines](./skills/guardrail-guidelines/SKILL.md)**: The defenses
+  to weigh whenever you create or improve the guardrails of a harness, custom agent,
+  or anything else that gives an LLM tools, layer by layer: before the model, inside
+  it, between it and the tool, around the tool, after it, and across the design.
+
+  Each defense is marked. Guardrails that read text are useful filters, but an attacker
+  who keeps adjusting gets past them; structural ones can't be talked out of a decision,
+  and the ones that held up against that attacker are all in the design layer. It ends
+  on a table: every harmful action the agent can take, what stops it with the model
+  fooled, the gap that rule still leaves, and the actions nothing stops yet.
+
+  ```
+  /guardrail-guidelines
+  /guardrail-guidelines protege o agente de suporte contra prompt injection
+  ```
+
 ## License
 
 MIT
