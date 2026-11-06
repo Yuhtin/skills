@@ -232,6 +232,20 @@ argue.
   /guardrail-guidelines protege o agente de suporte contra prompt injection
   ```
 
+- **[skill-eval-guidelines](./skills/skill-eval-guidelines/SKILL.md)**: The rules to
+  follow whenever you write a skill, judge one, or decide whether to install it: core
+  points before text, adherence and effect scored as a pair, real tasks run against a
+  no-skill arm and an unrelated-text control of the same length, and what each result
+  says to rewrite, drop, or keep.
+
+  It ends on four questions for anyone who says a skill works: which model, which
+  version, what baseline, and what length control.
+
+  ```
+  /skill-eval-guidelines
+  /skill-eval-guidelines vale instalar essa skill de code review?
+  ```
+
 ## License
 
 MIT
