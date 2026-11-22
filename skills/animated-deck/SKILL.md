@@ -22,6 +22,7 @@ O padrão de qualidade saiu de três pedidos de um usuário; o brief já nasce c
 | "seja criativo — animações, gráficos em SVG que se mexem" | toda cena é motion design que carrega significado, não diagrama com fade |
 | "use as cores da marca" | paleta lida dos tokens do projeto, um acento, fundo da marca |
 | "toca uma vez, sem loop" + "mais devagar pra dar tempo de ler" | a cena toca uma vez e repousa no **pôster**; ritmo de leitura |
+| "frase ruim, não dá pra entender: põe um exemplo" | o texto mostra o que acontece, com exemplo concreto, nunca a regra abstrata nem jargão do time |
 
 ## Fase 1 — Research do projeto
 

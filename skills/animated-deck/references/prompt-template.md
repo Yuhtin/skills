@@ -41,6 +41,9 @@ Projeto de origem: {{caminho do repo / URL}}. Saídas: {{deck Artifact · HTML �
 |---|---|
 {{uma linha por termo: palavra do dia a dia | jargão que ela substitui}}
 Tom: {{tom}}. Títulos apresentam o slide, sem drama.
+Cada frase diz o que a plateia vê acontecer, com um exemplo ("não inventa preço: só fala o valor do
+catálogo"). Nunca a regra de dentro em abstrato ("travas só no que não se negocia: permissão, origem de
+cada fato…") nem um termo que só o time usa: se precisa de explicação, troque por um exemplo.
 Exemplos fictícios, os mesmos em todo o deck: {{nomes, números, data de exemplo}}.
 
 ## 2. Paleta por papel (fonte: {{arquivo dos tokens}})
