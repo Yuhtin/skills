@@ -11,7 +11,7 @@
     {
       "name": "yuhtin-skills",
       "source": "./",
-      "description": "Agent skills Davi Duarte uses daily: adversarial review/debate/decide, a full pre-release audit, animated slide decks, and a deck of your open PRs.",
+      "description": "Agent skills Davi Duarte uses daily: animated decks and class slides with personality, adversarial review, a pre-release audit, eval and guardrail rules, and splitting work into parallel waves.",
       "version": "1.0.0",
       "homepage": "https://github.com/yuhtin/skills",
       "repository": "https://github.com/yuhtin/skills",
@@ -26,7 +26,10 @@
         "slides",
         "presentation",
         "animation",
-        "motion-design"
+        "motion-design",
+        "class-slides",
+        "teaching",
+        "parallel"
       ],
       "category": "development"
     }
