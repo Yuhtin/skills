@@ -134,9 +134,9 @@ argue.
   palette by role, fonts, and each slide's scene in beats.
 
   The output is a prompt to paste into a fresh chat. That chat follows the skill's
-  build guide: it writes the cover as the exemplar, fans out one author and one
-  adversarial reviewer per slide, and ships motion-design scenes (SVG and canvas)
-  that play once and rest on a frame that explains the slide alone — plus a single
+  build guide: it writes the cover as the exemplar, then every other slide itself, one
+  at a time in a single context (no subagents), each rendered and re-read
+  adversarially, and ships motion-design scenes (SVG and canvas) that play once and rest on a frame that explains the slide alone — plus a single
   offline HTML file where a click finishes a playing scene before moving on, and an
   MP4 recorded frame by frame if you ask for one.
 

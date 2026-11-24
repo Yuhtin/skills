@@ -30,13 +30,20 @@ deck pelo `type_url` → escreva `project/deck.json` completo (ordem de todos os
 
 **Pronto quando:** a capa passa na checagem, você leu o render dela, e ela está publicada.
 
-## Fase 3 — Cenas em paralelo
+## Fase 3 — As outras cenas, uma por vez
 
-Um autor por slide → um revisor adversarial do mesmo slide → uma passada de consistência no deck
-inteiro. Script e prompts em `SKILL/references/workflow.md`.
+Você mesmo escreve todos os slides, na ordem do `deck.json`, sem subagente nem workflow: um contexto só
+mantém o deck coerente (o mesmo cartão, a mesma pessoa, o mesmo exemplo desenhado igual em todo slide).
+Para cada slide:
 
-**Pronto quando:** todos os slides dão `RESULT PASS`, todo revisor voltou `ok`/`fixed`, e a consistência
-voltou `allPass`.
+1. Planeje as regiões e os tempos dos beats; escreva o arquivo copiando o molde do exemplar.
+2. `check_slide.py` até `RESULT PASS`; `render.py` em ~6 tempos de 0 a `END` mais o pôster, e **leia** cada PNG.
+3. Releia como revisor adversarial, supondo que ainda há defeito: texto sobreposto ou cortado, legenda que
+   some antes de ser lida (renderize logo antes e logo depois de cada beat), contraste baixo, fato ou palavra
+   diferente do `DESIGN.md`, papel de cor trocado, cena que é diagrama com fade. Corrija e renderize de novo.
+4. Publique os slides prontos de três em três, para o usuário acompanhar.
+
+**Pronto quando:** todos os slides dão `RESULT PASS` e você leu o pôster e os beats de cada um.
 
 ## Fase 4 — Sua leitura, publicação, entrega
 

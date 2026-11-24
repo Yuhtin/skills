@@ -3,8 +3,8 @@
 Troque todo `{{…}}` por um valor ou por uma orientação ("a critério do build: …") e entregue o bloco
 inteiro. O prompt é um guia para um tiro só, não um contrato fechado: seja preciso no que foi decidido
 e dê direção no resto. Tudo que está fora de `{{}}` fica como está.
-O chat novo grava a parte "Brief" como `ROOT/DESIGN.md` — os números de seção (§1–§7) são os que os
-prompts dos agentes citam; mantenha-os.
+O chat novo grava a parte "Brief" como `ROOT/DESIGN.md` — os números de seção (§1–§7) são os que o
+build cita; mantenha-os.
 
 ````markdown
 Use a skill `animated-deck` e siga `references/build.md` dela para construir este deck

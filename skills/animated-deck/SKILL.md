@@ -36,7 +36,7 @@ a uma recomendação do que a uma pergunta em branco. Levante, com fonte (`arqui
 - **O ambiente de build:** Chrome, `python3` + Pillow, `node`; se o usuário pediu MP4, também `ffmpeg` e
   um `puppeteer` existente em algum `node_modules`.
 
-Para temas grandes, delegue a leitura a subagentes e guarde só as conclusões.
+Leia tudo você mesmo, sem subagente, e guarde só as conclusões, cada uma com a sua fonte.
 
 **Pronto quando:** cada placeholder de [`references/prompt-template.md`](references/prompt-template.md)
 tem uma **resposta recomendada** tirada do research, ou uma orientação padrão.
