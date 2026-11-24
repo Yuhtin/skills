@@ -246,6 +246,22 @@ argue.
   /skill-eval-guidelines vale instalar essa skill de code review?
   ```
 
+- **[parallel](./skills/parallel/SKILL.md)**: Splits a list of work — a
+  milestone's issues, a goal's deliverables — into waves that can run at the same
+  time in separate sessions or worktrees without stepping on each other. It reads
+  what each item will actually write (files, tables, migrations, shared contracts,
+  generated files) instead of trusting the title, marks what collides and what
+  depends on what, and puts colliding items in different waves: waiting a wave is
+  cheap, untangling two finished PRs is not. It ends with one table per wave, the
+  reason in a sentence for each item, and a self-contained prompt per item that
+  gives the goal and the limits, not a step-by-step plan. It only launches the
+  sessions if you ask.
+
+  ```
+  /parallel as issues abertas do milestone 2
+  /parallel o que dessa lista dá pra rodar junto?
+  ```
+
 ## License
 
 MIT
