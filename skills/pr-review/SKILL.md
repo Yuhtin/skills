@@ -1,6 +1,12 @@
 ---
 name: pr-review
-description: Use para revisar um pull request de ponta a ponta. Estuda o PR, monta um plano de revisão (escolhe as skills pelo risco do que ele toca) e executa sem pedir aprovação, tudo no próprio contexto. Vê cada tela mudada, comenta no PR e, no fim, pergunta se aplica as mudanças sugeridas ou se o comentário basta. Triggers: "revisa esse PR", "review do #123", "dá uma olhada nesse PR", "pr review", /pr-review
+description: >
+  Use para revisar um pull request de ponta a ponta. Estuda o PR, monta um plano
+  de revisão (escolhe as skills pelo risco do que ele toca) e executa sem pedir
+  aprovação, tudo no próprio contexto. Vê cada tela mudada, comenta no PR e, no
+  fim, pergunta se aplica as mudanças sugeridas ou se o comentário basta.
+  Triggers: "revisa esse PR", "review do #123", "dá uma olhada nesse PR",
+  "pr review", /pr-review
 ---
 
 # PR review
