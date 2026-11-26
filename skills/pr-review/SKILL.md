@@ -1,7 +1,8 @@
 ---
 name: pr-review
 description: >
-  Use para revisar um pull request de ponta a ponta. Estuda o PR, monta um plano
+  Use para revisar um pull request ou merge request de ponta a ponta, em qualquer
+  host (GitHub, GitLab, Bitbucket) ou numa branch local. Estuda o PR, monta um plano
   de revisão (escolhe as skills pelo risco do que ele toca) e executa sem pedir
   aprovação, tudo no próprio contexto. Vê cada tela mudada, comenta no PR e, no
   fim, pergunta se aplica as mudanças sugeridas ou se o comentário basta.
@@ -17,11 +18,11 @@ A revisão inteira roda **no seu contexto, uma lente depois da outra**. Você l�
 
 ## 1. Estudar (rápido)
 
-Leia o PR por cima, sem revisar ainda:
+Leia o PR por cima, sem revisar ainda, pelo CLI ou pela API do host. Por exemplo, `gh pr view` e `gh pr diff` no GitHub, `glab mr view` e `glab mr diff` no GitLab. Sem host, use `git diff <base>...<branch>` e o log da branch.
 
-- `gh pr view <n> --json title,author,body,comments,reviews,statusCheckRollup,mergeable,mergeStateStatus,additions,deletions,changedFiles`
-- `gh api --paginate repos/<owner>/<repo>/pulls/<n>/files` dividido por tipo: código de tela, código de pacotes, testes, migrações, docs/specs, mockups, gerados/lock, fixtures.
-- O que ele **toca**: telas e rotas, jobs, migrações, permissões, integrações, dinheiro, nota fiscal, dado pessoal ou de saúde, envio para fora (WhatsApp, e-mail, webhook).
+- **O PR:** título, autor, descrição, comentários e revisões, estado do CI e se dá para fazer merge.
+- **O diff, dividido por tipo:** código de interface, código de backend ou biblioteca, testes, migrações, docs e specs, mockups, arquivos gerados e lock, fixtures.
+- **O que ele toca:** telas e rotas, jobs, migrações, permissões, integrações, dinheiro, dado pessoal ou sensível, envio para fora do sistema (e-mail, mensagens, webhooks).
 
 **Pronto quando** você consegue dizer em duas frases do que o PR trata e tem a lista do que ele toca, separando o escopo declarado do que veio junto.
 
@@ -29,12 +30,12 @@ Leia o PR por cima, sem revisar ainda:
 
 Escreva o plano numa nota curta, com:
 
-1. **Objetivo:** as 3 a 6 afirmações que têm de ser verdade para o PR estar pronto. Exemplos: "nenhum documento de uma paciente chega à conversa de outra", "as outras cidades emitem igual antes".
+1. **Objetivo:** as 3 a 6 afirmações que têm de ser verdade para o PR estar pronto. Exemplos: "um usuário nunca vê o arquivo de outro cliente", "quem não usa a opção nova continua com o comportamento de antes", "a migração roda sem travar a tabela".
 2. **Alertas de cara**, que já entram na revisão sem precisar de skill:
    - **Mais de um problema no PR.** Um PR deve resolver um problema nomeado e dar para revisar lendo. Quando há várias entregas, proponha a divisão: qual sai primeiro e o que fica para os PRs seguintes.
    - Mockups, prints ou artifacts commitados.
-   - Conflito com a main.
-   - Número de migração que colide com a main.
+   - Conflito com a branch base.
+   - Número de migração que colide com a branch base.
    - CI que não rodou de verdade (só checks pulados).
    - PR empilhado que leva outro PR junto.
 3. **As lentes:** uma skill por risco presente, tirada do catálogo abaixo. Use só as que o PR pede.
@@ -52,7 +53,7 @@ Escreva o plano numa nota curta, com:
 
 ## 4. Comentar no PR
 
-Poste uma revisão de comentário: `gh pr review <n> --comment --body-file <arquivo>`. Aprovar ou pedir mudanças só quando o dono do repositório pedir. Escreva no idioma e no tom do repositório:
+Poste uma revisão só de comentário, pelo host: `gh pr review <n> --comment --body-file <arquivo>` no GitHub, `glab mr note <n> --message` no GitLab, ou a API equivalente. Sem host, entregue o texto a quem pediu. Aprovar ou pedir mudanças só quando o dono do repositório pedir. Escreva no idioma e no tom do repositório:
 
 1. Uma ou duas frases de elogio concreto (o que o PR acertou).
 2. **Bloqueia**, **Deve mudar** e **Detalhes**, com `arquivo:linha` e a correção.
@@ -81,7 +82,7 @@ Prefira as skills do próprio repositório (`.claude/skills`, `.agents/skills`, 
 | conserto de bug | `diagnosing-bugs` (o bug se reproduz antes e some depois?) | mattpocock/skills |
 | testes novos ou o PR alega cobertura | `tdd` (o teste falha sem a mudança?) | mattpocock/skills |
 | módulos, fronteiras, nomes de domínio | `codebase-design` e `domain-modeling` | mattpocock/skills |
-| conflito com a main | `resolving-merge-conflicts` | mattpocock/skills |
+| conflito com a branch base | `resolving-merge-conflicts` | mattpocock/skills |
 | `AGENTS.md`, `CLAUDE.md` ou skills | `writing-for-agents` | mattpocock/skills |
 | permissão, dado pessoal, envio para fora, rota nova, upload ou arquivo | `security-review`, focada no fluxo do PR | yuhtin/skills |
 | rota pesada, imagem, cache, query, bundle, renders | `optimize-app` | yuhtin/skills |
