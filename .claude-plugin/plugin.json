@@ -24,6 +24,8 @@
     "motion-design",
     "class-slides",
     "teaching",
-    "parallel"
+    "parallel",
+    "pr-review",
+    "pull-request"
   ]
 }

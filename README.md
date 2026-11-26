@@ -14,6 +14,7 @@ Agent skills for Claude Code, Codex, Cursor, and anything else that reads
 | [**class-slide**](#class-slide) | Gives a class or talk deck personality: drawn cover, real code running, photos, motion everywhere. | `/class-slide deixa esse deck mais vivo` |
 | [**pr-deck**](#pr-deck) | Turns your open PRs into the research for an animated deck, one slide per change. | `/pr-deck` |
 | [**adversarial**](#adversarial) | Parallel agents that attack a plan, a diff, an open question, or a choice between options. | `/adversarial revisa esse plano` |
+| [**pr-review**](#pr-review) | Reviews a pull request end to end: a self-approved plan, the right skill per risk, every changed screen seen, a comment on the PR. | `/pr-review #2818` |
 | [**security-review**](#security-review) | A full pre-release audit across six fixed dimensions, ending in a ship verdict. | `/security-review da pra lancar isso?` |
 | [**eval-guidelines**](#eval-guidelines) | The rules for building the eval of a harness, agent, or LLM app. | `/eval-guidelines` |
 | [**guardrail-guidelines**](#guardrail-guidelines) | The defenses to weigh, layer by layer, when an LLM gets tools. | `/guardrail-guidelines` |
@@ -108,6 +109,30 @@ PRs belong to.
 ## Review and decide
 
 A second reader with no stake in the thing being right.
+
+### pr-review
+
+[`skills/pr-review/SKILL.md`](./skills/pr-review/SKILL.md)
+
+Reviews a pull request end to end, in one context and without subagents. It
+studies the PR first (what it is about, its size by file type, everything it
+touches) and writes its own **goal**: the three to six claims that must hold for
+the PR to be ready to merge. Then it plans the review without waiting for
+approval: the red flags it checks on sight (more than one problem in the PR,
+committed mockups, conflicts, a migration number that collides with main, CI that
+never really ran, a stacked PR riding along) and one lens per risk the PR
+carries, picked from a catalogue of skills by Matt Pocock, Emil Kowalski and this
+repo. When a lens is missing it names the skill, why this PR needs it, and the
+`npx skills` command that installs it.
+
+It runs the app locally to see every changed screen on desktop and at 390 px,
+checks the claims in the PR body, posts a comment review (never an approval),
+and ends by asking whether to apply the suggested changes on the PR, in a
+separate PR, or leave the comment.
+
+```
+/pr-review https://github.com/owner/repo/pull/123
+```
 
 ### adversarial
 
